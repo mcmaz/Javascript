@@ -1,0 +1,60 @@
+<html>
+
+<script>
+    let first=0
+    let operator=""
+    function digits (digit){
+        scrn.value+=digit
+
+    }
+    function screenClear(){
+        scrn.value=""
+    }
+    function operations(opt){
+        first=parseInt(scrn.value)
+        operator = opt
+        screenClear()
+
+    }
+    function result (){
+        if (operator =='+'){
+            scrn.value=first+parseInt(scrn.value)
+        }
+
+
+    }
+
+</script>
+
+<table border='1'>
+<tr bgcolour="red">
+<td colspan='4'> <input type ="text" id='scrn'> </td>
+
+</tr>
+<tr>
+    <td> <input type = "Button" id='n0' value = "0" onclick="digits('0')"></td> 
+    <td> <input type = "Button" id='n1' value = "1" onclick="digits('1')"></td>
+    <td> <input type = "Button" id='n2' value = "2" onclick="digits('2')"></td>
+    <td> <input type = "Button" id='bplus' value = "+" onclick="operations('+')"></td>
+</tr>
+<tr>
+    <td> <input type = "Button" id='n3' value = "3" onclick="digits('3')"></td> 
+    <td> <input type = "Button" id='n4' value = "4" onclick="digits('4')"></td>
+    <td> <input type = "Button" id='n5' value = "5" onclick="digits('5')"></td>
+    <td> <input type = "Button" id='bminus' value = "-" onclick="operations('-')"></td>
+
+</tr>
+
+<tr>
+    <td> <input type = "Button" id='n6' value = "6" onclick="digits('6')"></td> 
+    <td> <input type = "Button" id='n7' value = "7" onclick="digits('7')"></td>
+    <td> <input type = "Button" id='n8' value = "8" onclick="digits('8')"></td>
+    <td> <input type = "Button" id='bmultiply' value = "x" onclick="operations('x')"></td>
+</tr>
+
+<tr>
+    <td> <input type = "Button" id='n9' value = "9" onclick="digits('9')"></td> 
+    <td> <input type = "Button" id='bclear' value = "C" onclick="screenClear()"></td>
+    <td> <input type = "Button" id='bequals' value = "=" onclick="result()"></td>
+    <td> <input type = "Button" id='bdivide' value = "/" onclick="operations('+/')"></td>
+</tr>

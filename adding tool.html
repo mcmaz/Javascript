@@ -1,0 +1,109 @@
+<html>
+<script>
+
+    function addition(){
+        if(txt1.value==""){
+            alert("First number is missing")
+            txt1.focus()
+
+        }
+        else{
+            if(txt2.value==""){
+                alert("Second number is missing")
+                txt2.focus()
+
+        }else{
+                let A=txt1.value
+                let B=txt2.value
+                let C =parseInt(A)+parseInt(B)
+                txt3.value=C
+
+        }
+    
+    }
+
+    }
+    function divide(){
+        if(txt1.value==""){
+            alert("First number is missing")
+            txt1.focus()
+
+        }
+        else{
+            if(txt2.value==""){
+                alert("Second number is missing")
+                txt2.focus()
+
+        }else{
+                let A=txt1.value
+                let B=txt2.value
+                let C =parseInt(A)/parseInt(B)
+                txt3.value=C
+
+        }
+    
+    }
+
+    }   
+
+
+
+    function multiplication(){
+        if(txt1.value==""){
+            alert("First number is missing")
+            txt1.focus()
+
+        }
+        else{
+            if(txt2.value==""){
+                alert("Second number is missing")
+                txt2.focus()
+
+        }else{
+                let A=txt1.value
+                let B=txt2.value
+                let C =parseInt(A)*parseInt(B)
+                txt3.value=C
+
+        }
+    
+    }
+
+    }   
+
+
+
+</script>
+first number: <input id ="txt1"type="text">
+second number: <input id ="txt2"type="text">
+
+<br>
+
+<input
+id="btn"
+type = "Button"
+value ="+"
+onclick = "addition()">
+
+<input
+id="minus"
+type = "Button"
+value="-"
+onclick = "subtraction()">
+
+<input
+id="multiply"
+type = "Button"
+value="x"
+onClick ="multiplication()">
+
+<input
+id="divide"
+type = "Button"
+value="/"
+onClick = "divide()">
+
+<br>
+
+Result: <input id="txt3" type="text">
+</html>
